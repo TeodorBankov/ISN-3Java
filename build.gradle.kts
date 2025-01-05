@@ -36,6 +36,7 @@ dependencies {
 	implementation("org.projectlombok:lombok:1.18.24") // Use the latest Lombok version
 	compileOnly("org.projectlombok:lombok:1.18.24") // Needed for compilation only
 	annotationProcessor("org.projectlombok:lombok:1.18.24") // Required for annotation processing
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
 	//implementation("jakarta.persistence:jakarta.persistence-api:3.1.0") // JPA API
 	//implementation("org.hibernate:hibernate-core:6.0.0.Final")  // Hibernate ORM (or any other JPA provider you prefer)
 }
