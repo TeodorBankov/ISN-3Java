@@ -46,7 +46,7 @@ public class UserController {
 
         // Update полета
         user.setUsername(userDTO.getUsername());
-        // Ако имаш логика за ъпдейт на роли, може да заредиш RoleEntity и да сетнеш setRoles(...) и т.н.
+        // Акo ще има логика за ъпдейт на роли, може да се зареди RoleEntity и да се сетне setRoles(...) и т.н.
 
         UserEntity updatedUser = userRepository.save(user);
         return modelMapperService.convertToDto(updatedUser);
