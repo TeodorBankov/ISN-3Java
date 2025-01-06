@@ -25,6 +25,12 @@ public class ProductController {
         return modelMapperService.convertToDtoList(products, ProductDTO.class);
     }
 
+    @GetMapping("/by-price")
+    public List<ProductDTO> getProductsByPriceLessThan(@RequestParam Double budget) {
+        List<ProductEntity> products = productRepository.findProductsByPriceLessThan(budget);
+        return modelMapperService.convertToDtoList(products, ProductDTO.class);
+    }
+
     @GetMapping("/{id}")
     public ProductDTO getProductById(@PathVariable Long id) {
         ProductEntity product = productRepository.findById(id)
